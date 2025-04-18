@@ -1,0 +1,80 @@
+{
+  "question": "what does jamaican people speak?",
+  "ctxs": [
+    {
+      "text": "Entity: Jamaica (ID: m.03_r3)"
+    },
+    {
+      "text": "Entity: Jamaica (ID: m.03_r3)"
+    }
+  ],
+  "answers": [
+    "Jamaican English (ID: m.01428y)",
+    "Jamaican Creole English Language (ID: m.04ygk0)",
+    "Jamaican English (ID: m.01428y)"
+  ],
+  "expansion_candidates": [
+    "<think> Okay, so I need to figure out what language Jamaican people speak. I know Jamaica is a country in the Caribbean, and I've heard people there speak English, but I'm not entirely sure if that's the only language. Maybe they have their own dialect or another language? I remember hearing about something called Jamaican Patois or Patwa. I think that's a creole language. So, perhaps Jamaicans speak both English and Patois. But I'm not certain if Patois is considered an official language or just a dialect. I should look into that. I also wonder about the history.",
+    "<think> Okay, so I need to figure out what languages Jamaican people speak. I know Jamaica is a country in the Caribbean, but I'm not exactly sure about the linguistic details there. Let me think about this step by step. First, I remember that many Caribbean countries were colonized by European nations, and Jamaica was a British colony. So, I'm guessing English is probably one of the main languages spoken there. But I also know that in many post-colonial countries, there's often a local dialect or creole that develops, which can be different from the standard language. I've heard the term \"Jama",
+    "<think> Okay, so I need to figure out what language Jamaican people speak. Hmm, I know Jamaica is a country in the Caribbean, but I'm not exactly sure about their language. I think they might speak English because it's a commonwealth country, right? But then again, I've heard of something called Jamaican Patois. Maybe that's a dialect or another language they use alongside English. Wait, so is Jamaican Patois a creole language? I remember creole languages often emerge from mixing different languages, usually because of historical trade or colonization. Jamaica was a British colony, so maybe their language",
+    "<think> Okay, so I need to figure out what language Jamaican people speak. Hmm, I know Jamaica is a country in the Caribbean, but I'm not entirely sure about their language. I think they speak English because I've heard Jamaicans speaking English in movies and music. But wait, I also remember hearing about a Jamaican Patois or something like that. Maybe that's a dialect or another language they use?  Let me think about it. Jamaica was a British colony, right? So English is probably the official language. But many Caribbean countries have their own creoles or patois, which are mixtures of",
+    "<think> Okay, so I need to figure out what language Jamaican people speak. I know Jamaica is a country in the Caribbean, but I'm not exactly sure about their official language. I think it might be English because it was a British colony, right? But then I've heard of something called Jamaican Patois or Patwa. I'm not entirely sure if that's a language or a dialect. Maybe it's like a slang version of English? I should check that. Also, I remember hearing that in some Caribbean countries, they have creole languages which are a mix of different languages, often including English, African",
+    "<think> Okay, so I need to figure out what language Jamaican people speak. I'm not too familiar with Jamaica, but I know it's a country in the Caribbean. I think they speak English there because it's a Commonwealth country, right? But I've also heard that there's a Jamaican Patois or something like that. Maybe that's a dialect or another language they speak. Wait, so I should probably check what the official language is. I'm pretty sure it's English, but I also remember hearing that Jamaicans have their own way of speaking, which might be a creole language. I think cre",
+    "<think> Okay, so I need to figure out what languages Jamaican people speak. I know Jamaica is a country in the Caribbean, but I'm not exactly sure about their official language. I think English is probably one of them since it's a Commonwealth country, right? But I've also heard Jamaicans speak something called Patois. I'm not entirely sure what that is, though. Is it a dialect, a creole, or a separate language? I remember that many Caribbean countries have their own creole languages, which are mixtures of different languages. So maybe Jamaican Patois is a creole.",
+    "<think> Okay, I need to figure out what language Jamaican people speak. I know Jamaica is an island country, so probably they have their own language or dialect. Wait, isn't English widely spoken there? I think Jamaica was a British colony, so maybe English is the official language. But I've heard Jamaicans speak something that sounds different from standard English, maybe a dialect or a creole. Oh right, I think it's called Jamaican Patois or Patwa. So, the official language is English, but they also have this other language they use informally. I should check if there are any other languages",
+    "<think> Okay, I need to figure out what languages Jamaican people speak. I know Jamaica is an island country, so maybe they have their own language or dialect. I'm pretty sure English is involved because of the British influence, but I've also heard something about Jamaican Patois.  Wait, is Jamaican Patois a language or just a slang? I think it's more than slang; it's a creole language. So, the official language is probably English, but people also speak Patois. I should check if there are other languages spoken there too. Maybe some people speak other languages because of",
+    "<think> Okay, I need to figure out what languages Jamaican people speak. I know Jamaica is a country in the Caribbean, so I'm guessing they might speak English because of the British influence. But I also remember hearing that there's a specific dialect or maybe even a different language spoken there.  I think it's called Jamaican Patois or something like that. I'm not entirely sure if that's considered a separate language or just a dialect of English. Maybe it's a creole language? I've heard that creole languages often develop from a mix of different languages, especially in places with a history of colonization"
+  ],
+  "expansion_scores": [
+    0.6796906138420609,
+    0.6851941640645022,
+    0.6773673805592153,
+    0.682560224304701,
+    0.6769730592210742,
+    0.6864946439546974,
+    0.6832323166630841,
+    0.680018215617779,
+    0.6779116107284455,
+    0.682985039216384
+  ],
+  "expansion": "<think> Okay, so I need to figure out what language Jamaican people speak. I'm not too familiar with Jamaica, but I know it's a country in the Caribbean. I think they speak English there because it's a Commonwealth country, right? But I've also heard that there's a Jamaican Patois or something like that. Maybe that's a dialect or another language they speak. Wait, so I should probably check what the official language is. I'm pretty sure it's English, but I also remember hearing that Jamaicans have their own way of speaking, which might be a creole language. I think cre",
+  "reranking_candidates": [
+    [
+      {
+        "text": "Entity: Jamaica (ID: m.03_r3)"
+      },
+      {
+        "text": "Entity: Jamaica (ID: m.03_r3)"
+      }
+    ],
+    [
+      {
+        "text": "Entity: Jamaica (ID: m.03_r3)"
+      },
+      {
+        "text": "Entity: Jamaica (ID: m.03_r3)"
+      }
+    ],
+    [
+      {
+        "text": "Entity: Jamaica (ID: m.03_r3)"
+      },
+      {
+        "text": "Entity: Jamaica (ID: m.03_r3)"
+      }
+    ]
+  ],
+  "reranking_scores": [
+    0.3316648971595226,
+    0.3316648971595226,
+    0.3316648971595226
+  ],
+  "rerank": [
+    {
+      "text": "Entity: Jamaica (ID: m.03_r3)"
+    },
+    {
+      "text": "Entity: Jamaica (ID: m.03_r3)"
+    }
+  ]
+}

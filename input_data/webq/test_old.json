@@ -1,0 +1,18 @@
+[
+    {
+      "question": "what does jamaican people speak?",
+      "ctxs": [
+        {
+          "text": "Entity: Jamaica (ID: m.03_r3)"
+        },
+        {
+          "text": "Entity: Jamaica (ID: m.03_r3)"
+        }
+      ],
+      "answers": [
+        "Jamaican English (ID: m.01428y)",
+        "Jamaican Creole English Language (ID: m.04ygk0)",
+        "Jamaican English (ID: m.01428y)"
+      ]
+    }
+  ]

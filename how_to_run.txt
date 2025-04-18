@@ -1,0 +1,8 @@
+python run.py --input_dir input_data --output_dir output_results --dataset nq --split test --engine deepseek-r1-distill-qwen-32b --batch_size 3 --temperature 0.6 --rerank_n 8 --top_p 0.95
+
+
+
+python run.py --batch_size 1 --rerank_n 2 --engine deepseek-r1-distill-llama-70b 
+
+To evaluate:
+python utils/evaluate_recall.py --results_file output_result/webq/test/3-reranking_evaluation.jsonl

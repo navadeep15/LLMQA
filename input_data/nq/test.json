@@ -1,0 +1,9 @@
+[
+    {
+      "question": "What is the capital of France?",
+      "ctxs": [
+        {"text": "Paris is the capital and most populous city of France..."},
+        {"text": "France is a country located in Western Europe..."}
+      ]
+    }
+  ]

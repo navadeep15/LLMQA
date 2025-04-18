@@ -1,0 +1,42 @@
+[
+  {
+    "question": "what does jamaican people speak?",
+    "ctxs": [
+      {
+        "text": "Entity: Jamaica (ID: m.03_r3)"
+      },
+      {
+        "text": "Entity: Jamaican English (ID: m.01428y)"
+      },
+      {
+        "text": "Entity: Jamaican Creole English Language (ID: m.04ygk0)"
+      }
+    ],
+    "answers": [
+      "Jamaican Creole English Language (ID: m.04ygk0)",
+      "Jamaican English (ID: m.01428y)"
+    ]
+  },
+  {
+    "question": "what did james k polk do before he was president?",
+    "ctxs": [
+      {
+        "text": "Entity: James K. Polk (ID: m.042f1)"
+      },
+      {
+        "text": "Entity: United States Representative (ID: m.02_bcst)"
+      },
+      {
+        "text": "Entity: Governor of Tennessee (ID: m.04x_n9q)"
+      },
+      {
+        "text": "Entity: Speaker of the United States House of Representatives (ID: m.0cgqx)"
+      }
+    ],
+    "answers": [
+      "Speaker of the United States House of Representatives (ID: m.0cgqx)",
+      "Governor of Tennessee (ID: m.04x_n9q)",
+      "United States Representative (ID: m.02_bcst)"
+    ]
+  }
+]
