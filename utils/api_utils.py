@@ -6,7 +6,21 @@ from groq import Groq
 from sentence_transformers import SentenceTransformer
 
 # Initialize Groq client
-groq_client = Groq(api_key="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")
+# groq_client = Groq(api_key="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")
+groq_client = Groq(api_key="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")
+# groq_client = Groq(api_key="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")
+# groq_client = Groq(api_key="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")
+# groq_client = Groq(api_key="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")
+# groq_client = Groq(api_key="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")
+# groq_client = Groq(api_key="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")
+# groq_client = Groq(api_key="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")
+# groq_client = Groq(api_key="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")
+# groq_client = Groq(api_key="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")
+# groq_client = Groq(api_key="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")
+# groq_client = Groq(api_key="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")
+# groq_client = Groq(api_key="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")
+# groq_client = Groq(api_key="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")
+# groq_client = Groq(api_key="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")
 
 # Initialize local embedding model (runs locally, no API needed)
 embedding_model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')

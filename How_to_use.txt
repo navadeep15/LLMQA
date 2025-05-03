@@ -1,5 +1,5 @@
 To run it and generate the 4 files present in output_result/webq/test:
-python run.py --batch_size 1 --rerank_n 2 --engine deepseek-r1-distill-llama-70b 
+python run.py --batch_size 1 --rerank_n 8 --engine deepseek-r1-distill-llama-70b 
 
 To evaluate:
 python utils/evaluate_recall.py --results_file output_result/webq/test/3-reranking_evaluation.jsonl
@@ -12,3 +12,7 @@ the `test.json` file Contains some questions from the test_full_new.json dataset
 to get the test_full_new.json, (this test_full_new.json is a suitable format of the webqsp dataset, that can be used in our pipeline)
 
 to generate this test_full_new.json file, run the  `python Convert_webQSP.py` it will give the test_full_new.json
+
+
+
+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

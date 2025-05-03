@@ -19,15 +19,15 @@
 # if __name__ == "__main__":
 #     main()
 
-
 import json
 import os
 import numpy as np
 from typing import Dict, List, Set, Union
+from datetime import datetime
 
 def softmax(x: np.ndarray) -> np.ndarray:
     """Compute softmax values for each set of scores in x."""
-    e_x = np.exp(x - np.max(x))  # Numerical stability improvement
+    e_x = np.exp(x - np.max(x))
     return e_x / e_x.sum(axis=0)
 
 def sigmoid(x: Union[float, np.ndarray]) -> Union[float, np.ndarray]:
@@ -70,6 +70,11 @@ def calculate_single_recall(item: Dict, k: int, debug: bool = False) -> float:
                 if ans_id:
                     correct_ids.add(ans_id)
         
+        if not correct_ids:
+            if debug:
+                print("Warning: No valid answer IDs found")
+            return 0.0
+
         if debug:
             print(f"Ground truth IDs: {correct_ids}")
 
@@ -85,13 +90,16 @@ def calculate_single_recall(item: Dict, k: int, debug: bool = False) -> float:
             print(f"Top {k} retrieved IDs: {retrieved_ids[:k]}")
             print(f"All retrieved IDs: {retrieved_ids}")
 
-        # Calculate recall
+        # Calculate fractional recall
         top_k = retrieved_ids[:k]
-        recall = 100.0 if len(correct_ids & set(top_k)) > 0 else 0.0
+        correct_found = len(correct_ids & set(top_k))
+        recall = (correct_found / len(correct_ids)) * 100
         
-        if debug and recall == 0:
-            print("!! Zero recall detected !!")
-            print(f"Missing IDs: {correct_ids - set(retrieved_ids)}")
+        if debug:
+            print(f"Found {correct_found}/{len(correct_ids)} answers")
+            if recall < 100:
+                missing = correct_ids - set(top_k)
+                print(f"Missing IDs: {missing}")
         
         return recall
     
@@ -114,13 +122,13 @@ def calculate_dataset_recall(
         sample_debug: Number of samples to show debug info for
         
     Returns:
-        Dictionary of {k: recall_percentage}
+        Dictionary of {k: average_recall_percentage}
     """
     if not os.path.exists(results_file):
         print(f"Error: File not found at {results_file}")
         return {k: 0.0 for k in k_values}
     
-    recall_counts = {k: 0 for k in k_values}
+    recall_sums = {k: 0.0 for k in k_values}
     total_questions = 0
     
     with open(results_file, 'r', encoding='utf-8') as f:
@@ -136,8 +144,7 @@ def calculate_dataset_recall(
                 
                 for k in k_values:
                     recall = calculate_single_recall(item, k, debug=debug)
-                    if recall > 0:
-                        recall_counts[k] += 1
+                    recall_sums[k] += recall
                         
             except json.JSONDecodeError as e:
                 print(f"Skipping malformed line {i+1}: {str(e)}")
@@ -147,7 +154,7 @@ def calculate_dataset_recall(
         print("Error: No valid questions found in the file")
         return {k: 0.0 for k in k_values}
     
-    return {k: round((count/total_questions)*100, 2) for k, count in recall_counts.items()}
+    return {k: round(recall_sums[k] / total_questions, 2) for k in k_values}
 
 def print_results(recall_metrics: Dict[int, float]):
     """Print results in paper-compatible format."""
@@ -158,9 +165,19 @@ def print_results(recall_metrics: Dict[int, float]):
         print(f"{recall_metrics.get(k, 0):<8.2f}", end="")
     print()
 
+def save_recall_results(recall_metrics: Dict[int, float], output_file: str = "recall_results.txt"):
+    """Save recall metrics to a file."""
+    with open(output_file, 'w', encoding='utf-8') as f:
+        f.write("Recall Metrics:\n")
+        f.write(f"{'Top-k':<10} {'Recall(%)':<10}\n")
+        for k, v in recall_metrics.items():
+            f.write(f"{f'Top-{k}':<10} {v:<10.2f}\n")
+        f.write("\nEvaluation completed at: " + str(datetime.now()))
+
 def main():
     # Configure your paths here
-    results_file =  r"C:\Users\navad\OneDrive\Desktop\vs code\Open-Domain-QA\LLMQA\output_result\webq\test\3-reranking_evaluation.jsonl"
+    results_file = r"C:\Users\navad\OneDrive\Desktop\vs code\Open-Domain-QA\LLMQA\output_result\webq\test\3-reranking_evaluation.jsonl"
+    output_file = r"C:\Users\navad\OneDrive\Desktop\vs code\Open-Domain-QA\LLMQA\output_result\recall_metrics.txt"
     
     if not os.path.exists(results_file):
         print(f"Error: Results file not found at {results_file}")
@@ -168,8 +185,12 @@ def main():
         return
     
     print(f"Evaluating recall from: {results_file}")
-    recall_metrics = calculate_dataset_recall(results_file, sample_debug=3)
+    recall_metrics = calculate_dataset_recall(results_file, sample_debug=100)
+    
+    # Print to console and save to file
     print_results(recall_metrics)
+    save_recall_results(recall_metrics, output_file)
+    print(f"Results saved to: {output_file}")
 
 if __name__ == "__main__":
     main()
