@@ -1,0 +1,1 @@
+{"template": "You are DocumentReranker. Your task is to rank documents based on {standard}. Consider the question: {question}", "standard": "Relevance, informativeness, and likelihood of containing the answer to {question}."}
